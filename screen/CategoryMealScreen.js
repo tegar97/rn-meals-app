@@ -1,8 +1,12 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 
 const CategoryMealScreen = () => {
-  return <View style={styles.screen}>Category Meal Screen</View>;
+  return (
+    <View style={styles.screen}>
+      <Text>Category meal Screen</Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
