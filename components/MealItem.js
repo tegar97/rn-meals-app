@@ -10,7 +10,7 @@ import {
 const MailItem = (props) => {
   return (
     <View style={styles.mealItem}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={props.onSelectMeal}>
         <View>
           <View style={{ ...styles.mealRow, ...styles.mealHeader }}>
             <ImageBackground
