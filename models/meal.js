@@ -3,29 +3,31 @@ class Meal {
     id,
     categoryIds,
     title,
-    affordabilty,
+    affordability,
     complexity,
     imageUrl,
     duration,
-    ingeredients,
+    ingredients,
     steps,
     isGlutenFree,
     isVegan,
-    isVegatarian,
+    isVegetarian,
     isLactoseFree
   ) {
     this.id = id;
     this.categoryIds = categoryIds;
     this.title = title;
-    this.affordabilty = affordabilty;
-    this.complexity = complexity;
     this.imageUrl = imageUrl;
-    this.duration = duration;
-    this.ingeredients = ingeredients;
+    this.ingredients = ingredients;
     this.steps = steps;
+    this.duration = duration;
+    this.complexity = complexity;
+    this.affordability = affordability;
     this.isGlutenFree = isGlutenFree;
     this.isVegan = isVegan;
-    this.isVegatarian = isVegatarian;
+    this.isVegetarian = isVegetarian;
     this.isLactoseFree = isLactoseFree;
   }
 }
+
+export default Meal;
