@@ -9,6 +9,9 @@ const FilterScreen = () => {
   );
 };
 
+FilterScreen.navigationsOptions = {
+  headerTitle: "Filter Screen",
+};
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
