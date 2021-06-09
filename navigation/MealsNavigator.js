@@ -12,7 +12,7 @@ import React from "react";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import FilterScreen from "../screen/FilterScreen";
-
+import { Text } from "react-native";
 const defaultStackNavOptions = {
   defaultNavigationOptions: {
     headerStyle: {
