@@ -18,6 +18,12 @@ const defaultStackNavOptions = {
     headerStyle: {
       backgroundColor: Platform.OS === "android" ? Colors.primaryColor : "",
     },
+    HeaderTitleStyle: {
+      fontFamily: "open-sans-bold",
+    },
+    HeaderBacTitleStyle: {
+      fontFamily: "open-sans",
+    },
     headerTintColor: Platform.OS === "android" ? "white" : Colors.primaryColor,
   },
 };
@@ -47,6 +53,12 @@ const tabScreenConfig = {
         );
       },
       tabBarColor: Colors.primaryColor,
+      tabBarLabel:
+        Platform.OS === "android" ? (
+          <Text style={{ fontFamily: "open-sans-bold" }}>Meals</Text>
+        ) : (
+          "Meals"
+        ),
     },
   },
   Favorite: {
@@ -65,10 +77,16 @@ const MealsFavTabNavigator =
     ? createMaterialBottomTabNavigator(tabScreenConfig, {
         activeColor: "white",
         shifting: true,
+        barStyle: {
+          backgroundColor: Colors.primaryColor,
+        },
       })
     : createBottomTabNavigator(tabScreenConfig, {
         tabBarOptions: {
           activeTintColor: Colors.accentColor,
+          labelStyle: {
+            fontFamily: "font-sans",
+          },
         },
       });
 
