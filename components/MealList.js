@@ -1,7 +1,7 @@
 import React from "react";
 import { FlatList, View, Text, StyleSheet } from "react-native";
 import MealItem from "./../components/MealItem";
-const Meallist = () => {
+const Meallist = (props) => {
   const renderMealItem = (itemData) => {
     return (
       <MealItem
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
   list: {
     flex: 1,
     justifyContent: "center",
-    aligIntems: "center",
-    padding: 15,
+    alignItems: "center",
+    padding: 10,
   },
 });
 export default Meallist;
