@@ -8,29 +8,10 @@ import {
   FlatList,
 } from "react-native";
 import MealItem from "../components/MealItem";
+import Meallist from "../components/MealList";
 import { CATEGORIES, MEALS } from "../data/dummy-data";
 import Colors from "./../constant/colors";
 const CategoryMealScreen = (props) => {
-  const renderMealItem = (itemData) => {
-    return (
-      <MealItem
-        duration={itemData.item.duration}
-        complexity={itemData.item.complexity}
-        affordability={itemData.item.affordability}
-        title={itemData.item.title}
-        image={itemData.item.imageUrl}
-        onSelectMeal={() => {
-          props.navigation.navigate({
-            routeName: "MealDetail",
-            params: {
-              mealId: itemData.item.id,
-            },
-          });
-        }}
-      />
-    );
-  };
-
   const catId = props.navigation.getParam("categoryId");
 
   const displayedMeal = MEALS.filter(
@@ -38,16 +19,7 @@ const CategoryMealScreen = (props) => {
   );
 
   const selectedCategory = CATEGORIES.find((cat) => cat.id === catId);
-  return (
-    <View style={styles.screen}>
-      <FlatList
-        data={displayedMeal}
-        keyExtractor={(item, index) => item.id}
-        renderItem={renderMealItem}
-        style={{ width: "100%" }}
-      />
-    </View>
-  );
+  return <Meallist listData={displayedMeal} navigation={props.navigation} />;
 };
 
 CategoryMealScreen.navigationOptions = (navigationData) => {
